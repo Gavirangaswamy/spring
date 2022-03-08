@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+    http://www.springframework.org/schema/beans     
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/mvc 
+    http://www.springframework.org/schema/mvc/spring-mvc.xsd
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<bean id="bean" class="com.grs.lemon.bean.LemonBean">
+		<property name="mantravadiName" value="Amrutha"></property>
+		<property name="location" value="laggere"></property>
+		<property name="nums">
+			<array>
+				<value>1</value>
+				<value>8</value>
+			</array>
+		</property>
+		<property name="manthravaadis">
+			<list>
+				<value>Shanmuk</value>
+				<value>Nagesh</value>
+				<value>Hema</value>
+			</list>
+		</property>
+
+		<property name="magicians">
+			<map>
+				<entry key="Laggere" value="Amrutha" />
+				<entry key="Tumkur" value="Nagesha" />
+				<entry key="Turuvekere" value="Hema" />
+				<entry key="Bellary" value="Anusha" />
+			</map>
+		</property>
+
+		<property name="mantravettas">
+			<props>
+				<prop key="Laggere">Amrutha</prop>
+				<prop key="Turuvekere">Nagesha</prop>
+				<prop key="Bellary">Anusha</prop>
+				<prop key="Turuvekere">Hema</prop>
+			</props>
+		</property>
+	</bean>
+</beans>
