@@ -12,10 +12,10 @@
     http://www.springframework.org/schema/context 
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-
+	<context:property-placeholder location="classpath:location.properties"/>
 	<bean id="bean" class="com.grs.lemon.bean.LemonBean">
 		<property name="mantravadiName" value="Amrutha"></property>
-		<property name="location" value="laggere"></property>
+		<property name="location" value="${LemonBean.location}"></property>
 		<property name="nums">
 			<array>
 				<value>1</value>
@@ -46,6 +46,8 @@
 				<prop key="Bellary">Anusha</prop>
 				<prop key="Turuvekere">Hema</prop>
 			</props>
-		</property>
+		</property> 
+		<!-- <constructor-arg name="mantravadiName" value="grrfghn"/>
+		<constructor-arg name="location" value="bean"/> -->
 	</bean>
 </beans>
