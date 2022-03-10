@@ -13,7 +13,9 @@ public class Runner {
 		ApplicationContext context =new ClassPathXmlApplicationContext("context.xml");
 		LemonBean lemon = context.getBean("bean", LemonBean.class);
 		lemon.maataManthra();
+		System.out.println(lemon.getLocation());
 		System.out.println(Arrays.toString(lemon.getNums()));
+		
 	}
 
 }
