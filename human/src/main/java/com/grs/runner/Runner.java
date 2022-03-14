@@ -1,19 +1,16 @@
-package com.grs.vehicle.runner;
+package com.grs.runner;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.grs.vehicle.bean.VehicleBean;
+import com.grs.bean.Human;
 
 public class Runner {
 
 	public static void main(String[] args) {
 		ApplicationContext context = new ClassPathXmlApplicationContext("context.xml");
-		VehicleBean vehicle = context.getBean("bean", VehicleBean.class);
+		Human human = context.getBean("human",Human.class);
 
-		vehicle.run();
-		
-		
 	}
 
 }

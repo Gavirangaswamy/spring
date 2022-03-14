@@ -12,10 +12,11 @@
     http://www.springframework.org/schema/context 
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<bean id="engine" class="com.grs.vehicle.bean.Engine">
-		<property name="typeOfEngine" value="Petrol Engine"></property>
+	<bean id="root" class="com.grs.bean.Root">
+		<property name="typeOfSoil" value="red"></property>
 	</bean>
-	<bean id="bean" class="com.grs.vehicle.bean.VehicleBean" autowire="byType">
-		<property name="typeOfVehicle" value="car"/>
+	<bean id="bean" class="com.grs.bean.Tree">
+		<constructor-arg name="fruit" value="Orange"/>
+		<constructor-arg name="root" ref="root"/>
 	</bean>
 </beans>
